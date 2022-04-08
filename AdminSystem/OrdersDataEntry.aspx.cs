@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClassLibrary;
 
 public partial class _1_DataEntry : System.Web.UI.Page
 {
@@ -11,4 +12,20 @@ public partial class _1_DataEntry : System.Web.UI.Page
     {
 
     }
+
+    protected void btnOK_Click(object sender, EventArgs e)
+    {
+        ////create a new insatnce of clsOrderId
+        clsOrder AnOrder = new clsOrder();
+        //capture the orders id
+        AnOrder.OrderContent = txtOrderContent.Text;
+        Session["AnOrder"] = AnOrder;
+        //navigate to the viewer page
+        Response.Redirect("OrdersViewer.aspx");
+    }
+
+
+  
+
+
 }
