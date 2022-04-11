@@ -19,13 +19,14 @@
     </style>
 </head>
 <body>
-    This is the order entry page
     <form id="form1" runat="server">
+    This is the order entry page
         <div>
         </div>
         <asp:Label ID="lblOrderId" runat="server" Text="Order Number" width="108px"></asp:Label>
 &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtOrderId" runat="server" Width="129px"></asp:TextBox>
+        <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" Text="Find" />
         <br />
         <asp:Label ID="lblUserId" runat="server" Text="User Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
